@@ -4,6 +4,6 @@
 #        that is where we will look for package.json/.nvmrc/etc, not repo root!
 
 [build]
-   base     = "site"
+   base     = ""
    command  = "npm run build"
    publish  = "build"
