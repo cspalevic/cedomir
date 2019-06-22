@@ -1,32 +1,31 @@
 import React from 'react';
 import classnames from 'classnames';
-import logo from './logo.svg';
-import styles from './styles/flexbox/justifyContent.module.css';
-import './App.css';
+import styles from './styles';
+import Section from './components/Section';
+import Console from './modules/console/Console';
+import Resume from './modules/resume/Resume';
+import Contact from './modules/contact/Contact';
 
-const App: React.FC = () => {
-   const s = classnames(
-      styles.center
-   );
-   return (
-      <div className="App">
-         <p className={s}>test</p>
-         <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-               Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-            <a
-               className="App-link"
-               href="https://reactjs.org"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               Learn React
-        </a>
-         </header>
-      </div>
-   );
+class App extends React.Component {
+   render() {
+      const containerStyles = classnames(
+         styles.sizing.height.full,
+         styles.sizing.width.full
+      );
+      return (
+         <div className={containerStyles}>
+            <Section background={styles.colors.background.white}>
+               <Console />
+            </Section>
+            <Section background={styles.colors.background.lightSalmon}>
+               <Resume />
+            </Section>
+            <Section background={styles.colors.background.lightGreen}>
+               <Contact />
+            </Section>
+         </div>
+      );
+   }
 }
 
 export default App;
