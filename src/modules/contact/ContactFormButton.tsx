@@ -35,18 +35,13 @@ class ContactFormButton extends React.Component<Props, State> {
    }
 
    render() {
+      const containerStyles = classnames(
+         styles.sizing.height.full,
+         styles.sizing.width.full
+      );
       const buttonStyles = classnames(
-         styles.text.fontSize.xl,
-         styles.colors.background.transparent,
-         styles.colors.color.white,
-         styles.borders.border.solid3,
-         styles.borders.borderColor.white,
-         styles.borders.radius.radius5,
-         styles.spacing.paddingTop.padding10,
-         styles.spacing.paddingBottom.padding10,
-         styles.spacing.paddingRight.padding20,
-         styles.spacing.paddingLeft.padding20
-      )
+         styles.components.buttons.submit
+      );
       return (
          <ParticleEffectButton
             hidden={this.state.hidden}
@@ -55,7 +50,8 @@ class ContactFormButton extends React.Component<Props, State> {
             duration={1500}
             color="#fff"
             easing="easeOutElastic"
-            canvasPadding={50}>
+            canvasPadding={50}
+            className={containerStyles}>
             <button type="submit" onClick={this._beginAnimation} className={buttonStyles}>Send</button>
          </ParticleEffectButton>
       );

@@ -1,3 +1,3 @@
-export const displayFlex: string;
-export const displayBlock: string;
-export const displayNone: string;
+export const flex: string;
+export const block: string;
+export const none: string;

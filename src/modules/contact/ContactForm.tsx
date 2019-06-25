@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
+import styles from 'styles';
 import { encode, cleverBotPhrases, getCookie, setCookie } from 'lib/general';
 import ThanksAnimation from './ThanksAnimation';
 import ContactFormButton from './ContactFormButton';
-import styles from 'styles';
 
 interface Props { }
 interface State {
@@ -137,52 +137,81 @@ class ContactForm extends React.Component<Props, State> {
 
    render() {
       const { name, email, message, messageSent } = this.state;
-      let submitFormBtn;
-      if (messageSent) submitFormBtn = <ThanksAnimation id="thx" text="Thanks for reaching out! " emoji="😎" />
-      else submitFormBtn = <ContactFormButton submit={this._onSubmit} isValid={this._validate} />
+
       const formStyles = classnames(
-         styles.display.displayFlex,
+         styles.display.flex,
          styles.flexbox.justifyContent.center,
          styles.flexbox.alignItems.center,
          styles.flexbox.direction.column,
          styles.sizing.width.half,
-         styles.spacing.margin.horizontalAuto,
+         styles.spacing.marginTop.margin20,
+         styles.spacing.marginRight.auto,
+         styles.spacing.marginBottom.margin20,
+         styles.spacing.marginLeft.auto,
          styles.sizing.height.full
       );
       const inputContainerStyles = classnames(
-         styles.display.displayFlex,
+         styles.display.flex,
          styles.flexbox.direction.row,
          styles.sizing.width.full,
          styles.flexbox.justifyContent.spaceBetween
       );
-      const textareaStyles = classnames(
-         styles.sizing.width.full,
-         styles.sizing.height.sixTenth,
-         styles.borders.border.none,
-         styles.borders.radius.radius5,
-         styles.spacing.margin.margin10,
-         styles.spacing.padding.padding5
+      const colStyles = classnames(
+         styles.display.flex,
+         styles.flexbox.direction.column
       );
       const inputStyles = classnames(
-         styles.borders.border.none,
-         styles.borders.radius.radius5,
+         styles.components.inputs.form
+      );
+      const textareaContainerStyles = classnames(
+         styles.display.flex,
+         styles.flexbox.flex.full,
+         styles.flexbox.direction.column,
+         styles.sizing.width.full,
+         styles.spacing.marginTop.margin10
+      )
+      const textareaStyles = classnames(
+         styles.display.flex,
+         styles.flexbox.flex.full,
+         styles.components.inputs.form,
+         styles.sizing.width.full
+      );
+      const labelStyles = classnames(
+         styles.colors.color.white,
          styles.spacing.padding.padding5,
-         styles.sizing.width.fourTenth
+         styles.text.fontSize.fs18
+      );
+      const buttonContainerStyles = classnames(
+         styles.spacing.marginTop.margin20
       );
       return (
          <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" className={formStyles}>
-            <input name="form-name" type="hidden" value="contact" />
-            <input name="bot-field" type="hidden" value={cleverBotPhrases()} />
+            <input className={inputStyles} name="form-name" type="hidden" value="contact" />
+            <input className={inputStyles} name="bot-field" type="hidden" value={cleverBotPhrases()} />
             <div className={inputContainerStyles}>
-               <input className={inputStyles} name="name" type="text" placeholder="Your Name" value={name}
-                  onChange={this._onNameChange} required />
-               <input className={inputStyles} name="email" type="email" placeholder="Your Email" value={email}
-                  onChange={this._onEmailChange} required />
+               <div className={colStyles}>
+                  <label className={labelStyles}>Your Name:</label>
+                  <input className={inputStyles} name="name" type="text" placeholder="Your Name" value={name}
+                     onChange={this._onNameChange} required />
+               </div>
+               <div className={colStyles}>
+                  <label className={labelStyles}>Your Email:</label>
+                  <input className={inputStyles} name="email" type="email" placeholder="Your Email" value={email}
+                     onChange={this._onEmailChange} required />
+               </div>
             </div>
-            <textarea name="message" placeholder="Your Message" className={textareaStyles}
-               value={message} onChange={this._onMessageChange} required />
+            <div className={textareaContainerStyles}>
+               <label className={labelStyles}>Your Message:</label>
+               <textarea name="message" placeholder="Your Message" className={textareaStyles}
+                  value={message} onChange={this._onMessageChange} required rows={15} />
+            </div>
             <div data-netlify-recaptcha="true"></div>
-            {submitFormBtn}
+            <div className={buttonContainerStyles}>
+               {
+                  messageSent ? <ThanksAnimation id="thx" text="Thanks for reaching out! " emoji="😎" />
+                     : <ContactFormButton submit={this._onSubmit} isValid={this._validate} />
+               }
+            </div>
          </form>
       )
    }

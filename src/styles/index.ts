@@ -5,6 +5,7 @@ import display from './display';
 import colors from './colors';
 import text from './text';
 import borders from './borders';
+import components from './components';
 
 const styles = {
    flexbox,
@@ -13,7 +14,8 @@ const styles = {
    display,
    colors,
    text,
-   borders
+   borders,
+   components
 };
 
 export default styles;

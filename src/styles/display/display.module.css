@@ -1,9 +1,9 @@
-.displayFlex {
+.flex {
    display: flex;
 }
-.displayBlock {
+.block {
    display: block;
 }
-.displayNone {
+.none {
    display: none;
 }

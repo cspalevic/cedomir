@@ -6,18 +6,17 @@ interface Props {
    children: JSX.Element;
 }
 
-class CenterContent extends React.Component<Props> {
+class Container extends React.Component<Props> {
    render() {
-      const centerStyles = classnames(
-         styles.sizing.height.sevenTenth,
-         styles.sizing.width.sixTenth
+      const containerStyles = classnames(
+         styles.components.container.container
       );
       return (
-         <div className={centerStyles}>
+         <div className={containerStyles}>
             {this.props.children}
          </div>
       );
    }
 }
 
-export default CenterContent;
+export default Container;

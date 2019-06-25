@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './styles';
 import Section from './components/Section';
+import Container from './components/Container';
 import Console from './modules/console/Console';
 import Resume from './modules/resume/Resume';
 import Contact from './modules/contact/Contact';
@@ -15,13 +16,19 @@ class App extends React.Component {
       return (
          <div className={containerStyles}>
             <Section background={styles.colors.background.white}>
-               <Console />
+               <Container>
+                  <Console />
+               </Container>
             </Section>
             <Section background={styles.colors.background.lightSalmon}>
-               <Resume />
+               <Container>
+                  <Resume />
+               </Container>
             </Section>
             <Section background={styles.colors.background.lightGreen}>
-               <Contact />
+               <Container>
+                  <Contact />
+               </Container>
             </Section>
          </div>
       );

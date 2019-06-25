@@ -1,0 +1,17 @@
+.submit {
+   font-size: 32px;
+   padding: 10px 20px;
+   background: transparent;
+   border: 3px solid #fff;
+   border-radius: 5px;
+   color: #fff;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.submit:hover, .submit:focus {
+   outline: none;
+}
+.submit:hover {
+   background: #fff;
+   color: #00a388;
+}

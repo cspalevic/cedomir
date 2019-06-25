@@ -1,18 +1,21 @@
-.sm {
+.fs12 {
    font-size: 12px;
 }
-.md {
+.fs16 {
    font-size: 16px;
 }
-.lg {
+.fs18 {
+   font-size: 18px;
+}
+.fs24 {
    font-size: 24px;
 }
-.xl {
+.fs32 {
    font-size: 32px;
 }
-.xxl {
+.fs48 {
    font-size: 48px;
 }
-.xxxl {
+.fs56 {
    font-size: 56px;
 }

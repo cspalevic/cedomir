@@ -10,7 +10,7 @@ interface Props {
 class Section extends React.Component<Props> {
    render() {
       const sectionStyles = classnames(
-         styles.display.displayFlex,
+         styles.display.flex,
          styles.sizing.height.full,
          styles.sizing.width.full,
          styles.flexbox.alignItems.center,

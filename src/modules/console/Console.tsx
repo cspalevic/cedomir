@@ -1,17 +1,17 @@
 import React from 'react';
 import styles from 'styles';
 import classnames from 'classnames';
-import CenterContent from 'components/CenterContent';
 
 /// TODO: Add animation for text
 class Console extends React.Component {
    render() {
       const consoleContainerStyles = classnames(
-         styles.display.displayFlex,
+         styles.display.flex,
          styles.flexbox.direction.column,
          styles.borders.shadow.largeGray,
          styles.sizing.height.full,
-         styles.sizing.width.full
+         styles.sizing.width.full,
+         styles.borders.radius.radius5
       );
       const headerStyles = classnames(
          styles.colors.background.white,
@@ -28,15 +28,16 @@ class Console extends React.Component {
          styles.borders.radius.bottomLeft5,
          styles.borders.radius.bottomRight5
       );
+      const lineStyles = classnames(
+         styles.spacing.padding.padding10
+      );
       return (
-         <CenterContent>
-            <div className={consoleContainerStyles}>
-               <div className={headerStyles}>Cedomir -- bash</div>
-               <div className={bodyStyles}>
-                  <div>>>></div>
-               </div>
+         <div className={consoleContainerStyles}>
+            <div className={headerStyles}>Cedomir -- bash</div>
+            <div className={bodyStyles}>
+               <div className={lineStyles}>>>></div>
             </div>
-         </CenterContent>
+         </div>
       );
    }
 }
