@@ -85,7 +85,7 @@ class ContactForm extends React.Component<Props, State> {
      * Submit the form
      */
    _onSubmit = () => {
-      fetch('/chat', {
+      fetch('/contact', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
