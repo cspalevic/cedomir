@@ -4,18 +4,16 @@ import styles from 'styles';
 
 interface Props {
    children: JSX.Element;
-   background: string;
 }
 
 class Section extends React.Component<Props> {
    render() {
       const sectionStyles = classnames(
          styles.display.flex,
-         styles.sizing.height.full,
+         styles.sizing.height.fullScreen,
          styles.sizing.width.full,
          styles.flexbox.alignItems.center,
-         styles.flexbox.justifyContent.center,
-         this.props.background
+         styles.flexbox.justifyContent.center
       );
       return (
          <section className={sectionStyles}>

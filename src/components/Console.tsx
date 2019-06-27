@@ -3,14 +3,47 @@ import styles from 'styles';
 import classnames from 'classnames';
 
 /// TODO: Add animation for text
-class Console extends React.Component {
+interface Props { }
+interface State {
+   index: number;
+   text: string;
+}
+
+class Console extends React.Component<Props, State> {
+   interval?: number;
+   message: string;
+
+   constructor(props: Props) {
+      super(props);
+      this.state = {
+         index: 0,
+         text: ''
+      };
+      this.interval = undefined;
+      this.message = "Hey, I'm Cedomir Charlie Spalevic!";
+   }
+
+   componentDidMount() {
+      if (this.state.index < this.message.length) {
+         this.interval = window.setInterval(() => {
+            this.setState({
+               text: this.message.substring(0, this.state.index),
+               index: this.state.index + 1
+            });
+         }, 75);
+      }
+      else {
+         clearInterval(this.interval);
+      }
+   }
+
    render() {
       const consoleContainerStyles = classnames(
          styles.display.flex,
          styles.flexbox.direction.column,
          styles.borders.shadow.largeGray,
-         styles.sizing.height.full,
-         styles.sizing.width.full,
+         styles.sizing.height.sevenTenth,
+         styles.sizing.width.sixTenth,
          styles.borders.radius.radius5
       );
       const headerStyles = classnames(
@@ -35,7 +68,7 @@ class Console extends React.Component {
          <div className={consoleContainerStyles}>
             <div className={headerStyles}>Cedomir -- bash</div>
             <div className={bodyStyles}>
-               <div className={lineStyles}>>>></div>
+               <div className={lineStyles}>>>>{this.state.text}</div>
             </div>
          </div>
       );
