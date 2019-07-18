@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from './Link';
-import { links, ILink } from '../data/links';
+import { links, ILink } from 'data/links';
 
 class Footer extends React.Component {
    render() {

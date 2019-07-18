@@ -23,7 +23,18 @@
          {
             "name": "css-module-types"
          }
-      ]
+      ],
+      "paths": {
+         "@components/*": [
+            "components/*"
+         ],
+         "@data/*": [
+            "data/*"
+         ],
+         "@lib/*": [
+            "lib/*"
+         ]
+      }
    },
    "include": [
       "src"

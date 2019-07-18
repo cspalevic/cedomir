@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import Job from './Job';
 import ResumeSection from './ResumeSection';
-import { workExperiences, IWorkExperience } from '../data/workExperience';
-import { technicalSkills } from '../data/technicalSkills';
+import { workExperiences, IWorkExperience } from 'data/workExperience';
+import { technicalSkills } from 'data/technicalSkills';
 
 class Resume extends React.Component {
    render() {
