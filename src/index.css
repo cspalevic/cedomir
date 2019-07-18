@@ -43,7 +43,7 @@ span {
    font-style: italic;
 }
 footer {
-   background: var(--black);
+   background: var(--gray);
    display: flex;
    justify-content: center;
    align-items: center;
@@ -95,7 +95,7 @@ footer {
    margin: 0 20px;
 }
 .link svg {
-   color: var(--gray);
+   color: var(--darkGray);
    font-size: 32px;
 }
 .resume {
