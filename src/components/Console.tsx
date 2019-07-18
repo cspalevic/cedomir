@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from 'styles';
-import classnames from 'classnames';
+import { Container } from 'react-bootstrap';
 
 /// TODO: Add animation for text
 interface Props { }
@@ -38,38 +37,16 @@ class Console extends React.Component<Props, State> {
    }
 
    render() {
-      const consoleContainerStyles = classnames(
-         styles.display.flex,
-         styles.flexbox.direction.column,
-         styles.borders.shadow.largeGray,
-         styles.sizing.height.sevenTenth,
-         styles.sizing.width.sixTenth,
-         styles.borders.radius.radius5
-      );
-      const headerStyles = classnames(
-         styles.colors.background.white,
-         styles.colors.color.black,
-         styles.borders.radius.topLeft5,
-         styles.borders.radius.topRight5,
-         styles.text.textAlign.center
-      );
-      const bodyStyles = classnames(
-         styles.sizing.width.full,
-         styles.sizing.height.full,
-         styles.colors.background.black,
-         styles.colors.color.white,
-         styles.borders.radius.bottomLeft5,
-         styles.borders.radius.bottomRight5
-      );
-      const lineStyles = classnames(
-         styles.spacing.padding.padding10
-      );
       return (
-         <div className={consoleContainerStyles}>
-            <div className={headerStyles}>Cedomir -- bash</div>
-            <div className={bodyStyles}>
-               <div className={lineStyles}>>>>{this.state.text}</div>
-            </div>
+         <div className="main">
+            <Container>
+               <div className="console-container">
+                  <div className="console-header">Cedomir -- bash</div>
+                  <div className="console-body">
+                     <div>>>>{this.state.text}</div>
+                  </div>
+               </div>
+            </Container>
          </div>
       );
    }

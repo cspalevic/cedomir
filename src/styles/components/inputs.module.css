@@ -1,9 +1,0 @@
-.form {
-   border: none;
-   border-radius: 5px;
-   padding: 10px;
-   transition: 0.3s;
-}
-.form:hover, .form:active, .form:hover, .form:active {
-   box-shadow: 5px 5px 20px 1px #535B5f
-}
