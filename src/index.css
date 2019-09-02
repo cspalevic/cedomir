@@ -51,7 +51,6 @@ footer {
    padding: 20px;
    margin-top: 40px;
 }
-/** Utilites */
 .bold {
    font-weight: 700;
 }
@@ -62,34 +61,26 @@ footer {
    align-items: center;
 }
 .main {
+   background: var(--darkGray);
    height: 100vh;
    width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
-/** Components */
-.console-container {
+.intro {
    display: flex;
-   flex-direction: column;
-   box-shadow: 0 0 15px 20px var(--gray);
-   border-radius: 5px;
-   height: 700px;
+   justify-content: space-between;
 }
-.console-header {
-   background: var(--white);
-   color: var(--black);
-   border-top-left-radius: 5px;
-   border-top-right-radius: 5px;
-   text-align: center;
+.intro img {
+   border: 3px solid var(--white);
+   border-radius: 200px;
+   width: 175px;
 }
-.console-body {
-   width: 100%;
-   height: 100%;
-   background: var(--black);
+.intro p {
    color: var(--white);
-   border-bottom-left-radius: 5px;
-   border-bottom-right-radius: 5px;
+   font-size: 24px;
+   padding: 25px;
 }
 .link {
    margin: 0 20px;
@@ -100,6 +91,18 @@ footer {
 }
 .resume {
    margin: 50px 0;
+}
+.resume-heading {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 0;
+}
+.resume-heading a {
+   padding-left: 10px;
+}
+.resume-heading svg {
+   font-size: 30px;
 }
 .section-body {
    padding: 15px;
@@ -114,4 +117,14 @@ footer {
 }
 .job .description {
    padding-top: 10px;
+}
+
+@media(max-width: 992px) {
+   .intro {
+      flex-direction: column;
+      align-items: center;
+   }
+   .intro p {
+      font-size: 20px;
+   }
 }

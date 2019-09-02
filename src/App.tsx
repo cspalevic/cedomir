@@ -1,5 +1,5 @@
 import React from 'react';
-import Console from 'components/Console';
+import Intro from 'components/Intro';
 import Resume from 'components/Resume';
 import Footer from 'components/Footer';
 
@@ -7,7 +7,7 @@ class App extends React.Component {
    render() {
       return (
          <div>
-            <Console />
+            <Intro />
             <Resume />
             <Footer />
          </div>
