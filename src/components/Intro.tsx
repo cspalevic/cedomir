@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { myMessage } from 'data/my-message';
+import { myMessage, altText } from 'data/messages';
 
 class Intro extends React.Component {
    render() {
@@ -8,7 +8,7 @@ class Intro extends React.Component {
          <div className="main">
             <Container>
                <div className="intro">
-                  <img src="/stuff/me.jpg" />
+                  <img alt={altText} title={altText} src="/stuff/me.jpg" />
                   <p>{myMessage}</p>
                </div>
             </Container>

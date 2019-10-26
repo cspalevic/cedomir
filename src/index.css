@@ -75,7 +75,7 @@ footer {
 .intro img {
    border: 3px solid var(--white);
    border-radius: 200px;
-   width: 175px;
+   width: 200px;
 }
 .intro p {
    color: var(--white);
