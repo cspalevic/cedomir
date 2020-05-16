@@ -3,4 +3,4 @@ export const myMessage: string =
    + "with a bachelor's in Computer Science. I am currently working at Spraying Systems Co. "
    + "as an Application Developer. I am a big fan of practically anything Science/Technology related. ";
 
-export const altText: string = 'That\' me in Hawaii';
+export const altText: string = 'That\'s me in Hawaii';
