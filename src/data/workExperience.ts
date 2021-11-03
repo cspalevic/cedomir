@@ -8,10 +8,16 @@ export interface IWorkExperience {
 
 export const workExperiences: IWorkExperience[] = [
    {
+      company: 'PayPal',
+      jobTitle: 'Software Engineer 2',
+      when: '2021 - Present',
+      summary: 'Coming soon'
+   },
+   {
       company: 'Spraying Systems',
       jobTitle: 'Application Developer',
-      when: '2019 - Present',
-      summary: 'Coding and maintaining business applications, troubleshooting and solving software issues and bugs, and participating in an agile development environment including daily scrum, sprint planning, retrospectives, and performing peer code reviews. ',
+      when: '2019 - 2021',
+      summary: 'Coding and maintaining business applications, troubleshooting and solving software issues and bugs, and participating in an agile development environment including daily scrum, sprint planning, retrospectives, and performing peer code reviews.',
       accomplishments: [
          'Designed and implemented a .NET MVC application for processing new leads into the CRM system.',
          'Assisted in a ReactJS application that displays information within CRM.',
