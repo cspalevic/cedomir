@@ -1,3 +1,5 @@
 node_modules
 .next
 .eslintcache
+# Local Netlify folder
+.netlify

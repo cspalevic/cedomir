@@ -1,14 +1,9 @@
 const NotFound = () => (
-  <div className="flex flex-col">
+  <div className="px-5 w-full lg:w-[72rem]">
     <h2 className="text-center text-gray-800 dark:text-gray-50">
       {"Couldn't find the page you are looking for"}
     </h2>
-    <svg
-      data-name="Layer 1"
-      width="1120.59226"
-      height="777.91584"
-      viewBox="0 0 1120.59226 777.91584"
-    >
+    <svg className="w-full h-auto" viewBox="0 0 1120.59226 777.91584">
       <title>Page not found</title>
       <circle cx="212.59226" cy="103" r="64" fill="#ff6584" />
       <path
