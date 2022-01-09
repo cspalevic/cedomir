@@ -1,7 +1,7 @@
 import React from "react";
 
-const Toggle = ({ Icon = null, title = "", onClick }) => (
-   <div className="flex flex-row">
+const Toggle = ({ Icon = null, title = "", className = "", onClick }) => (
+   <div className={`flex flex-row ${className}`}>
       {Icon ? <Icon className="w-7 text-gray-800 dark:text-gray-50 pr-1" /> : null}
       <button
          onClick={onClick}

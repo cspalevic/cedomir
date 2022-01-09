@@ -1,14 +1,15 @@
 {
-   "title": "Cedomir Spalevic",
-   "profilePictureAlt": "Me, in Hawaii, smiling",
-   "location": "Chicago, IL",
-   "college": "Illinois State University",
-   "job": "Software Engineer, PayPal",
-   "email": "cedomir.spalevic@gmail.com",
-   "githbubUsername": "cedomir-spalevic",
-   "themeToggleTitle": "Toggle theme",
-   "introduction": "Hey! I am Cedomir (Charlie) Spalevic. I am an Illinois State University graduate with a bachelor's in Computer Science. I am currently working as a Software Engineer at PayPal. I am a big fan of practically anything Science/Technology related.",
-   "resumeLinkText": "Resume",
-   "blogLinkText": "Blog",
-   "projectsLinkText": "Projects"
+  "title": "Cedomir Spalevic",
+  "profilePictureAlt": "Me, in Hawaii, smiling",
+  "location": "Chicago, IL",
+  "college": "Illinois State University",
+  "job": "Software Engineer, PayPal",
+  "email": "cedomir.spalevic@gmail.com",
+  "githbubUsername": "cedomir-spalevic",
+  "themeToggleTitle": "Toggle theme",
+  "introduction": "Hey! I am Cedomir (Charlie) Spalevic. I am an Illinois State University graduate with a bachelor's in Computer Science. I am currently working as a Software Engineer at PayPal. I am a big fan of practically anything Science/Technology related.",
+  "homeLinkText": "Home",
+  "resumeLinkText": "Resume",
+  "blogLinkText": "Blog",
+  "projectsLinkText": "Projects"
 }
