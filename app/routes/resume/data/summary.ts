@@ -1,0 +1,2 @@
+export const summary =
+  "Accomplished Software Engineer who excels at collaborating with internal clients to develop solutions designed to solve business problems, automate manual processes, and integrate systems into the business. Skilled at coding, troubleshooting, and debugging solutions. Adept at documenting technical activities that arise while participating in continuous improvement initiatives. Dedicated to increasing customer satisfaction, improving business processes, developing unique applications for clients, and improving functionality.";
