@@ -23,6 +23,7 @@ const Resume: React.FC = () => {
         <Text as="h1">{name}</Text>
         <Text as="h3">{location}</Text>
         <Anchor
+          id="download-resume"
           href="/images/CharlieSpalevic_Resume.pdf"
           title="Download Resume"
           className="absolute right-0 bottom-[1.25rem]"

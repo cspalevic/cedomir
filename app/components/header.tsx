@@ -11,9 +11,9 @@ const Header: React.FC = () => {
     <header className="flex min-h-[4rem] w-full flex-row-reverse items-center justify-between px-[2rem]">
       <div className="flex items-center">
         <IconButton
-          onClick={theme.toggleTheme}
+          onClick={theme?.toggleTheme}
           iconProps={
-            theme.isDarkMode
+            theme?.isDarkMode
               ? {
                   as: IconName.Sun,
                   size: "lg",
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           }
         />
       </div>
-      <nav className="flex items-center">
+      <nav data-testid="nav" className="flex items-center">
         {[
           { href: "/", text: "Home" },
           { href: "/resume", text: "Resume" },

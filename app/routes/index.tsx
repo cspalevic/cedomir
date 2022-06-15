@@ -41,18 +41,6 @@ const Index: React.FC = () => {
         </Text>
         <Text as="p">Thanks for checking this out. Have a great day!</Text>
       </div>
-      {/* <Text as="p" className="flex flex-1">
-        Hey, I'm Charlie Spalevic. I'm a Software Engineer at PayPal on the
-        Global Pay Later (GPL) team.
-        <br />
-        I'm a Computer Science graduate from Illinois State University.
-        <br />
-        I'm another tech geek interested in web technologies, machine learning,
-        3d printing and trying to figure out how this crazy thing called the
-        internet works.
-        <br />
-        Thanks for checking this out. Have a great day!
-      </Text> */}
     </div>
   );
 };

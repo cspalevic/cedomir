@@ -15,12 +15,13 @@
     "setup": "prisma migrate dev && prisma db seed",
     "start": "remix-serve build",
     "start:mocks": "binode --require ./mocks -- @remix-run/serve:remix-serve build",
-    "test": "vitest",
+    "test": "vitest --config test/vitest.config.ts",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 \"npx cypress open\"",
     "pretest:e2e:run": "npm run build",
     "test:e2e:run": "cross-env PORT=8811 start-server-and-test start:mocks http://localhost:8811 \"npx cypress run\"",
     "typecheck": "tsc -b && tsc -b cypress",
-    "validate": "run-p \"test -- --run\" lint typecheck test:e2e:run"
+    "validate": "run-p \"test -- --run\" lint typecheck test:e2e:run",
+    "gresume": "node scripts/generateResumePdf"
   },
   "prettier": {},
   "eslintIgnore": [
@@ -37,7 +38,6 @@
     "@remix-run/server-runtime": "^1.5.1",
     "bcryptjs": "^2.4.3",
     "marked": "^4.0.16",
-    "puppeteer": "^14.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tiny-invariant": "^1.2.0"
@@ -73,6 +73,7 @@
     "prettier": "2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "prisma": "^3.14.0",
+    "puppeteer": "^14.3.0",
     "start-server-and-test": "^1.14.0",
     "tailwindcss": "^3.0.24",
     "ts-node": "^10.7.0",

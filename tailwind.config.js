@@ -42,19 +42,8 @@ module.exports = {
           fontSize: theme("fontSize.xl"),
         },
       });
-      addComponents({
-        ".card": {
-          backgroundColor: theme("colors.white"),
-          borderRadius: theme("borderRadius.lg"),
-          padding: theme("spacing.6"),
-          boxShadow: theme("boxShadow.xl"),
-        },
-      });
-      addUtilities({
-        ".content-auto": {
-          contentVisibility: "auto",
-        },
-      });
+      addComponents({});
+      addUtilities({});
     }),
     autoprefixer(),
   ],
